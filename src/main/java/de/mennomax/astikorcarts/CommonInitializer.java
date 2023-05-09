@@ -27,7 +27,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class CommonInitializer implements Initializer {
-    @Override
+   /* @Override
     public void init(final Context mod) {
         final ModContainer container = mod.context().getActiveContainer();
         ObjectHolderRegistry.addHandler(new Consumer<>() {
@@ -42,7 +42,7 @@ public class CommonInitializer implements Initializer {
                         .execute(() -> ObjectHolderRegistry.removeHandler(this));
                 }
             }
-        });
+        }); */ //This could be the main culprit for the pig crash bug, as somebody on github stated in issue #88 https://github.com/issork/astikor-carts/issues/88#issuecomment-1426866269
         mod.modBus().<EntityAttributeCreationEvent>addListener(e -> {
             e.put(AstikorCarts.EntityTypes.POSTILION.get(), LivingEntity.createLivingAttributes().build());
         });
