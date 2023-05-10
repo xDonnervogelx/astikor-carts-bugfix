@@ -27,9 +27,9 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class CommonInitializer implements Initializer {
-   /* @Override
+    @Override
     public void init(final Context mod) {
-        final ModContainer container = mod.context().getActiveContainer();
+        /* final ModContainer container = mod.context().getActiveContainer();
         ObjectHolderRegistry.addHandler(new Consumer<>() {
             boolean run = true;
 
