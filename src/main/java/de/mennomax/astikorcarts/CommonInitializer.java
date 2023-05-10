@@ -42,7 +42,14 @@ public class CommonInitializer implements Initializer {
                         .execute(() -> ObjectHolderRegistry.removeHandler(this));
                 }
             }
-        }); */ //This could be the main culprit for the pig crash bug, as somebody on github stated in issue #88 https://github.com/issork/astikor-carts/issues/88#issuecomment-1426866269
+        }); */ 
+        /* //This, left for comparison purposes, could be the main culprit for the pig crash bug, as somebody on github stated in issue
+        // #88 https://github.com/issork/astikor-carts/issues/88#issuecomment-1426866269
+        
+        // Thanks for Verph for figuring out this fix! I (xFirefalconx/xDonnervogelx) applied a part of their changes to the original repository.
+        // TODO: It might still be bugged, but not fatal anymore. Refer to changes in this repository for reference or pick it from its parent repo, the TFC fork. 
+        // https://github.com/xFirefalconx/astikor-carts-tfc-bugfixcomparisons/commit/4bb4b085b935d85468d0bbd2a616c2aa0c575486 */
+        
         mod.modBus().<EntityAttributeCreationEvent>addListener(e -> {
             e.put(AstikorCarts.EntityTypes.POSTILION.get(), LivingEntity.createLivingAttributes().build());
         });
