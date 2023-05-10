@@ -15,9 +15,9 @@ plugins {
 
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.1.2'
+version = '1.1.7' // pulled origin fork version was 1.1.2, 1.1.6 is on TFC so we move to 1.1.7 - decide what you do when merging.
 group = 'de.mennomax' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'astikorcarts-1.18.2'
+archivesBaseName = 'astikorcarts-1.18.2_mc-pig_crashfix'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -98,7 +98,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.85'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.0' //changed min Forge version, revert if necessary.
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
