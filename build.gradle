@@ -15,7 +15,7 @@ plugins {
 
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.1.7' // pulled origin fork version was 1.1.2, 1.1.6 is on TFC so we move to 1.1.7 - decide what you do when merging.
+version = '1.1.8' // pulled origin fork version was 1.1.2, 1.1.6 is on TFC so we move to 1.1.7 (1.1.8 after fixing other scripts related to the issue I forgot) - decide what you do when merging.
 group = 'de.mennomax' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'astikorcarts-1.18.2_mc-pig_crashfix'
 
